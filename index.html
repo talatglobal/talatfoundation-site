@@ -5,9 +5,8 @@
   <title>TALAT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Favicon for browser tabs -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="talat-favicon.black.2000.png" />
-  <link rel="apple-touch-icon" href="talat-favicon.black.2000.png" />
 
   <style>
     body {
@@ -20,9 +19,18 @@
     }
 
     img.logo {
-      width: min(40vw, 700px);
+      width: min(35vw, 700px); /* comfy on laptops/desktops */
       height: auto;
+      max-height: 80vh;
       display: block;
+    }
+
+    /* Make the logo larger on mobiles while still centred */
+    @media (max-width: 768px) {
+      img.logo {
+        width: 60vw;
+        max-height: 60vh;
+      }
     }
   </style>
 </head>
